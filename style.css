@@ -2,8 +2,17 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: 'Poppins', sans-serif;
 }
-  
+h1 span {
+    color: rgb(255, 0, 0);
+    transition: 0.5s ease;
+}
+span:hover {
+    color: rgb(255, 109, 133);
+    transition: 0.5s ease;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -13,10 +22,10 @@ body {
 .button {
     position: relative;
     padding: 12px 24px;
-    background-color: #ffffff;
-    border: 2px solid #000000;
+    background-color: #000000;
+    border: 1px solid #000000;
     border-radius: 6px;
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
@@ -26,9 +35,9 @@ body {
 }
 
 .button:hover {
-    background-color: yellow;
+    background-color: rgb(255, 255, 255);
     transition: all .6s ease-in-out;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 .button .preloader {
