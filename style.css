@@ -1,15 +1,27 @@
-* {
+html, body {
     margin: 0;
     padding: 0;
-}
-.button {
+    height: 100%;
+  }
+  
+  body {
     display: flex;
     justify-content: center;
-    justify-items: center;
     align-items: center;
+  }
+  
+  .button {
     padding: 20px;
-}
-button {
+  }
+  
+  button {
     outline: none;
+    color: red;
+    background-color: blue;
     font-size: 20px;
-}
+    border-radius: 15%;
+  }
+  button span {
+    font-weight: bold;
+  }
+  
