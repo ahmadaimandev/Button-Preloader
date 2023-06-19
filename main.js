@@ -1,9 +1,10 @@
 function showPreloader() {
     var button = document.querySelector('.button');
-    button.classList.add('show-preloader');
-  
+    button.classList.add('loading');
+    
+    // Simulating a delayed action
     setTimeout(function() {
-      button.classList.remove('show-preloader');
+      button.classList.remove('loading');
     }, 2000);
   }
   
