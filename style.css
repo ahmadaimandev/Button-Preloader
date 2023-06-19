@@ -11,19 +11,32 @@ html, body {
   }
   
   .button {
-    position: relative;
-    padding: 20px;
-    overflow: hidden;
+    padding: 15px 24px;
+    background-color: #08557f;
+    color: #000000;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 10px;
   }
   
-  .preloader {
+  .button:hover {
+    background-color: #000000;
+    color: #509ef8;
+  }
+
+/*Preloader Start*/
+.preloader {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 20px;
     height: 20px;
-    border: 2px solid #000;
+    border: 2px solid #fdfdfd;
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 1s infinite linear;
@@ -31,14 +44,16 @@ html, body {
     visibility: hidden;
   }
   
-  @keyframes spin {
+@keyframes spin {
     to {
       transform: rotate(360deg);
     }
   }
   
-  .show-preloader .preloader {
+.show-preloader .preloader {
     opacity: 1;
     visibility: visible;
   }
+/*Preloader End*/
+
   
