@@ -4,21 +4,13 @@ html, body {
     height: 100%;
     font-family: 'Poppins', sans-serif;
 }
-h1 span {
-    color: rgb(255, 0, 0);
-    transition: 0.5s ease;
-}
-span:hover {
-    color: rgb(255, 109, 133);
-    transition: 0.5s ease;
-}
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-  
+
 .button {
     position: relative;
     padding: 12px 24px;
@@ -76,5 +68,3 @@ body {
       transform: translate(-50%, -50%) rotate(360deg);
     }
 }
-
-
