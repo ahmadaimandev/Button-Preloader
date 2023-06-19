@@ -11,17 +11,34 @@ html, body {
   }
   
   .button {
+    position: relative;
     padding: 20px;
+    overflow: hidden;
   }
   
-  button {
-    outline: none;
-    color: red;
-    background-color: blue;
-    font-size: 20px;
-    border-radius: 15%;
+  .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s infinite linear;
+    opacity: 0;
+    visibility: hidden;
   }
-  button span {
-    font-weight: bold;
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .show-preloader .preloader {
+    opacity: 1;
+    visibility: visible;
   }
   
