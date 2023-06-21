@@ -1,70 +1,38 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+* {
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/*Header Start*/
+.header {
+    padding: 40px; /* Adjust the padding according to your design */
+    text-align: center; /* Center-align the text */
 }
 
-.button {
-    position: relative;
-    padding: 12px 24px;
-    background-color: #000000;
-    border: 1px solid #000000;
-    border-radius: 6px;
-    color: #ffffff;
-    font-size: 16px;
+  .header h1 {
+    color: #067d81; /* Set the text color */
+    font-size: 45px; /* Adjust the font size */
+    position: relative; /* Position the underline relative to the header text */
+    display: inline-block; /* Display the header text as an inline-block element */
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.6s, color 0.3s;
 }
 
-.button:hover {
-    background-color: rgb(255, 255, 255);
-    transition: all .6s ease-in-out;
-    color: rgb(0, 0, 0);
-}
-
-.button .preloader {
+.header h1::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
-    border: 2px solid #000;
-    border-top-color: transparent;
-    border-radius: 50%;
-    animation: spin 1s infinite linear;
-    opacity: 0;
-    visibility: hidden;
+    width: 100%;
+    height: 5px; /* Adjust the height of the underline */
+    background-color: #03657e; /* Set the color of the underline */
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Start with the underline scaled to 0 width */
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out; /* Add a transition effect */
+    border-radius: 10px;
 }
-  
-.button.loading .preloader {
-    opacity: 1;
-    visibility: visible;
+
+.header h1:hover::after {
+    transform: scaleX(1); /* Scale the underline to full width on hover */
+    transform-origin: left;
+    transition: transform 0.4s ease-in-out; /* Add a transition effect */
 }
-  
-.button .button-text {
-    transition: opacity 0.3s;
-}
-  
-.button.loading .button-text {
-    opacity: 0;
-}
-  
-@keyframes spin {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-      transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
+/*Header End*/
