@@ -36,3 +36,10 @@
     transition: transform 0.4s ease-in-out; /* Add a transition effect */
 }
 /*Header End*/
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    .header h1 {
+      font-size: 30px; /* Adjust the font size for smaller screens */
+    }
+}
